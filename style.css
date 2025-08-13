@@ -1,0 +1,31 @@
+  
+
+        span {
+            color: blue;
+        }
+        div{
+            background-color: beige;
+            text-align: center;
+        }
+
+        ol{
+        display: inline-block;
+        font-size: 18px;
+        }
+        p{
+            font-size: 20px;
+        }
+        h2 {
+            display: inline-block   ;
+            
+        }
+             h2 a{
+            color: white;
+            
+        }
+        img{
+            float:right 
+           }
+        ul{
+            font-size: 18px;
+        }
