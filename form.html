@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    function validateForm(){
+       passwordcheck= document.getElementById("password").value
+       //alert(name);
+       if(passwordcheck.length<10){
+            alert("password is less than 10 character")
+            return false
+       }
+        else
+            return true
+    }
+      document.getElementById("btn").addEventListener("click", function() {
+    alert("You clicked the button!");
+
+  });
+
+      function changecolor(){
+        document.getElementById("mainheading").style.color="red";
+    }
+        function resetColor() {
+      document.getElementById("mainheading").style.color = "black"; // Back to original
+    }
+</script>
+</head>
+<body>
+    <div>
+    <h1 onmouseover="changecolor()" onmouseout="resetColor()" id="mainheading">Please Enter your information to sign up</h1>
+    <form action="" method="post" onSubmit="return validateForm()">
+        firstname
+        <input type="text" name="firstname" id="firstname"> <br>
+        lastname 
+        <input type="text" name="lastname"><br>
+        <label for="moreInfo">Additional Information:</label><br>
+        <textarea rows="4" cols="50" name="moreInfo"></textarea>
+        <br>
+        password
+        <input type="password" name="password" id="password"><br>
+        Which language do you speak
+        <select name="language">
+            <option>Danish</option>
+            <option>English</option>
+            <option>Urdu</option>
+        </select><br>
+        Hobbies:<br>
+    <input type="checkbox" name="hobbies" value="reading">Reading books<br>
+    <input type="checkbox" name="hobbies" value="running"> Running<br>
+    Gender:
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">female<br>
+    Email:
+    <input type="email" name="email" required><br>
+    choose file to upload
+    <input type="file" name="fileUpload" accept="images/*,.pdf" required><br>
+    <input type="submit" value="sign up"><br>
+    <br><br><br>
+    </form>
+    <button type="button" id="btn" >click me</button>
+</div>
+
+</body>
+</html>
